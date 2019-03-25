@@ -13,8 +13,15 @@ public class FizzBuzzSolution {
     }
 
     public String fizzBuzz(Integer number) {
-        throw new SolutionNotImplementedException();
+        String answer = number.toString();
+        if (multipleThree(number)) {
+            answer = "fizz";
+        }
+        if (multipleThree(number)) {
+            answer = "buzz";
+        }
     }
 
 }
+
 
