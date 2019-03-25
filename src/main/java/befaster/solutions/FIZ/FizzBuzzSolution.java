@@ -12,23 +12,35 @@ public class FizzBuzzSolution {
         return ((number % 5) == 0);
     }
 
+    private Boolean containsKey (Integer number, Integer key) {
+        while (number >= 0) {
+            if ((number % 10) == key) {
+                return true;
+            }
+            number = number / 10;
+        }
+        return false;
+    }
+
     private Boolean isMagic (Integer number, Integer key) {
         if (number % key == 0) {
             return true;
         }
+        return containsKey(number, key);
     }
 
     public String fizzBuzz(Integer number) {
-        if (multipleThree(number) && multipleFive(number)) {
+        if (isMagic(number, 3) && isMagic(number, 5)) {
            return "fizz buzz";
         }
-        if (multipleThree(number)) {
+        if (isMagic(number, 3)) {
            return "fizz";
         }
-        if (multipleFive(number)) {
+        if (isMagic(number, 5)) {
             return "buzz";
         }
         return number.toString();
     }
 
 }
+
