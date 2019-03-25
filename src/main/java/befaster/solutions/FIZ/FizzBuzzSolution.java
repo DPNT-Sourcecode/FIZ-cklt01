@@ -13,6 +13,7 @@ public class FizzBuzzSolution {
     }
 
     private Boolean containsKey (Integer number, Integer key) {
+        // TODO: the checker should watch for timeout, in case of infinite loop
         while (number > 0) {
             if ((number % 10) == key) {
                 return true;
@@ -43,5 +44,6 @@ public class FizzBuzzSolution {
     }
 
 }
+
 
 
