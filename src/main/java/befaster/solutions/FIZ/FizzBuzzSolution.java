@@ -45,6 +45,11 @@ public class FizzBuzzSolution {
     }
 
     public String fizzBuzz(Integer number) {
+        List<String> attributes = new ArrayList<String>();
+
+
+
+
         String answer = number.toString();
         if (isMagic(number, 3)) {
            answer = "fizz";
@@ -52,12 +57,16 @@ public class FizzBuzzSolution {
         if (isMagic(number, 5)) {
             if (answer.isEmpty() == false) {
                 answer = answer + " ";
+            }else{
+                answer = "";
             }
             answer = answer + "buzz";
         }
         if (isDeluxe(number)) {
             if (answer.isEmpty() == false) {
                 answer = answer + " ";
+            }else{
+                answer
             }
             answer = answer + "deluxe";
         }
@@ -65,4 +74,5 @@ public class FizzBuzzSolution {
     }
 
 }
+
 
