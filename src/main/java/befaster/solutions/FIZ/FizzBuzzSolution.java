@@ -53,6 +53,9 @@ public class FizzBuzzSolution {
         if (isMagic(number, 5)) {
             attributes.add("buzz");
         }
+        if (number % 2 == 0) {
+            attributes.add("fake");
+        }
         if (isDeluxe(number)) {
             attributes.add("deluxe");
         }
@@ -63,9 +66,3 @@ public class FizzBuzzSolution {
     }
 
 }
-
-
-
-
-
-
