@@ -30,6 +30,13 @@ public class FizzBuzzSolution {
         return containsKey(number, key);
     }
 
+    private Boolean isDelux (Integer number) {
+        if (number < 10){
+            return false;
+        }
+        return containsKey(number, key);
+    }
+
     public String fizzBuzz(Integer number) {
         if (isMagic(number, 3) && isMagic(number, 5)) {
            return "fizz buzz";
@@ -44,6 +51,7 @@ public class FizzBuzzSolution {
     }
 
 }
+
 
 
 
