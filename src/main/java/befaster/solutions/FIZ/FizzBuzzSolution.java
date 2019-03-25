@@ -13,15 +13,19 @@ public class FizzBuzzSolution {
     }
 
     public String fizzBuzz(Integer number) {
-        String answer = number.toString();
-        if (multipleThree(number)) {
-            answer = "fizz";
+        if (multipleThree(number) && multipleFive(number)) {
+           return "fizz buzz";
         }
         if (multipleThree(number)) {
-            answer = "buzz";
+           return "fizz";
         }
+        if (multipleFive(number)) {
+            return "buzz";
+        }
+        return number.toString();
     }
 
 }
+
 
 
