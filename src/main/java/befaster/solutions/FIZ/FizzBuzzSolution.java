@@ -36,7 +36,7 @@ public class FizzBuzzSolution {
             return false;
         }
         Integer lastDigit = number % 10;
-        while (number > 0) {
+        while (number >= 10) {
             number = number / 10;
             if ((number % 10) != lastDigit) {
                 return false;
@@ -63,6 +63,7 @@ public class FizzBuzzSolution {
     }
 
 }
+
 
 
 
