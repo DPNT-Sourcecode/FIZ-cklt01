@@ -46,33 +46,22 @@ public class FizzBuzzSolution {
 
     public String fizzBuzz(Integer number) {
         List<String> attributes = new ArrayList<String>();
-
-
-
-
-        String answer = number.toString();
         if (isMagic(number, 3)) {
-           answer = "fizz";
+            attributes.append("fizz");
         }
         if (isMagic(number, 5)) {
-            if (answer.isEmpty() == false) {
-                answer = answer + " ";
-            }else{
-                answer = "";
-            }
-            answer = answer + "buzz";
+            attributes.append("buzz");
         }
         if (isDeluxe(number)) {
-            if (answer.isEmpty() == false) {
-                answer = answer + " ";
-            }else{
-                answer
-            }
-            answer = answer + "deluxe";
+            attributes.append("deluxe");
         }
-        return answer;
+        if (attributes.isEmpty() == true) {
+            return number.toString();
+        }
+        return attributes.concatenate(" ");
     }
 
 }
+
 
 
