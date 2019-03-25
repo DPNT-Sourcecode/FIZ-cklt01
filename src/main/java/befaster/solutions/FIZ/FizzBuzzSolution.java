@@ -12,6 +12,12 @@ public class FizzBuzzSolution {
         return ((number % 5) == 0);
     }
 
+    private Boolean isMagic (Integer number, Integer key) {
+        if (number % key == 0) {
+            return true;
+        }
+    }
+
     public String fizzBuzz(Integer number) {
         if (multipleThree(number) && multipleFive(number)) {
            return "fizz buzz";
@@ -26,6 +32,3 @@ public class FizzBuzzSolution {
     }
 
 }
-
-
-
