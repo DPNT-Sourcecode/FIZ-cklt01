@@ -1,6 +1,7 @@
 package befaster.solutions.FIZ;
 
 import befaster.runner.SolutionNotImplementedException;
+import java.util.ArrayList;;
 
 public class FizzBuzzSolution {
 
@@ -45,23 +46,24 @@ public class FizzBuzzSolution {
     }
 
     public String fizzBuzz(Integer number) {
-        List<String> attributes = new ArrayList<String>();
+        ArrayList<String> attributes = new ArrayList<String>();
         if (isMagic(number, 3)) {
-            attributes.append("fizz");
+            attributes.add("fizz");
         }
         if (isMagic(number, 5)) {
-            attributes.append("buzz");
+            attributes.add("buzz");
         }
         if (isDeluxe(number)) {
-            attributes.append("deluxe");
+            attributes.add("deluxe");
         }
         if (attributes.isEmpty() == true) {
             return number.toString();
         }
-        return attributes.concatenate(" ");
+        return String.join(" ", attributes);
     }
 
 }
+
 
 
 
