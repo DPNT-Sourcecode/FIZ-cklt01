@@ -50,13 +50,13 @@ public class FizzBuzzSolution {
            answer = "fizz";
         }
         if (isMagic(number, 5)) {
-            if (answer.notNull()) {
+            if (answer.isEmpty() == false) {
                 answer = answer + " ";
             }
             answer = answer + "buzz";
         }
         if (isDeluxe(number)) {
-            if (answer.notNull()) {
+            if (answer.isEmpty() == false) {
                 answer = answer + " ";
             }
             answer = answer + "deluxe";
@@ -65,3 +65,4 @@ public class FizzBuzzSolution {
     }
 
 }
+
