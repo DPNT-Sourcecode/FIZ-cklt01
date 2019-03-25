@@ -30,35 +30,38 @@ public class FizzBuzzSolution {
         return containsKey(number, key);
     }
 
-    private Boolean isDelux (Integer number) {
+    private Boolean isDeluxe (Integer number) {
         if (number < 10){
             return false;
         }
+        Integer lastDigit = number % 10;
         while (number > 0) {
-            if ((number % 10) == key) {
-                return true;
-            }
             number = number / 10;
+            if ((number % 10) != lastDigit) {
+                return false;
+            }
         }
-        return false;
+        return true;
     }
 
     public String fizzBuzz(Integer number) {
-        if (isMagic(number, 3) && isMagic(number, 5)) {
-           return "fizz buzz";
-        }
+        String answer = number.toString();
         if (isMagic(number, 3)) {
-           return "fizz";
+           answer = "fizz";
         }
         if (isMagic(number, 5)) {
-            return "buzz";
+            if (answer.notNull()) {
+                answer = answer + " ";
+            }
+            answer = answer + "buzz";
         }
-        return number.toString();
+        if (isDeluxe(number)) {
+            if (answer.notNull()) {
+                answer = answer + " ";
+            }
+            answer = answer + "deluxe";
+        }
+        return answer;
     }
 
 }
-
-
-
-
-
