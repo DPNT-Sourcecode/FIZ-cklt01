@@ -13,7 +13,7 @@ public class FizzBuzzSolution {
     }
 
     private Boolean containsKey (Integer number, Integer key) {
-        // TODO: the checker should watch for timeout, in case of infinite loop
+        // FEEDBACK: the checker should watch for timeout, in case of infinite loop
         while (number > 0) {
             if ((number % 10) == key) {
                 return true;
@@ -34,7 +34,13 @@ public class FizzBuzzSolution {
         if (number < 10){
             return false;
         }
-        return containsKey(number, key);
+        while (number > 0) {
+            if ((number % 10) == key) {
+                return true;
+            }
+            number = number / 10;
+        }
+        return false;
     }
 
     public String fizzBuzz(Integer number) {
@@ -51,6 +57,7 @@ public class FizzBuzzSolution {
     }
 
 }
+
 
 
 
