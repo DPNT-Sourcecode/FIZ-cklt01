@@ -31,6 +31,13 @@ public class FizzBuzzSolution {
         return containsKey(number, key);
     }
 
+    private Boolean isSuperMagic (Integer number, Integer key) {
+        if (number % key != 0) {
+            return false;
+        }
+        return containsKey(number, key);
+    }
+
     private Boolean isDeluxe (Integer number) {
         if (number < 10){
             return false;
@@ -66,5 +73,6 @@ public class FizzBuzzSolution {
     }
 
 }
+
 
 
