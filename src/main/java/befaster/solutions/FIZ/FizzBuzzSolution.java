@@ -56,13 +56,14 @@ public class FizzBuzzSolution {
         if (isDeluxe(number)) {
             attributes.add("deluxe");
         }
-        if (attributes.isEmpty() == true) {
+        if (attributes.isEmpty()) {
             return number.toString();
         }
         return String.join(" ", attributes);
     }
 
 }
+
 
 
 
