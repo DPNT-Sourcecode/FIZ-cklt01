@@ -13,7 +13,7 @@ public class FizzBuzzSolution {
     }
 
     private Boolean containsKey (Integer number, Integer key) {
-        while (number >= 0) {
+        while (number > 0) {
             if ((number % 10) == key) {
                 return true;
             }
@@ -43,4 +43,5 @@ public class FizzBuzzSolution {
     }
 
 }
+
 
