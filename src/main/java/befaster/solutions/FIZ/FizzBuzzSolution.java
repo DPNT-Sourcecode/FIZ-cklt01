@@ -52,6 +52,11 @@ public class FizzBuzzSolution {
         return true;
     }
 
+    private Boolean isSuperDeluxe (Integer number) {
+        return (isSuperMagic(number, 3) || isSuperMagic(number, 5));
+    }
+
+
     public String fizzBuzz(Integer number) {
         ArrayList<String> attributes = new ArrayList<String>();
         if (isMagic(number, 3)) {
@@ -60,7 +65,7 @@ public class FizzBuzzSolution {
         if (isMagic(number, 5)) {
             attributes.add("buzz");
         }
-        if (isDeluxe(number)) {
+        if (isSuperDeluxe(number)) {
             if (number % 2 == 1) {
                 attributes.add("fake");
             }
@@ -73,6 +78,7 @@ public class FizzBuzzSolution {
     }
 
 }
+
 
 
 
